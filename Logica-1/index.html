@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Logica - Mines</title>
+    <script src="main.js"></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 50ch;
+            margin: auto;
+            background-color: #FFF;
+            height: 90dvh;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .mensagens {
+            overflow-y: scroll;
+
+        }
+
+        .instructions {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <p>
+            Digite a ação desejada no formato: <strong>número direção</strong> <br>
+            Exemplo: <strong>10 cima</strong> <br>
+            Direções válidas: cima, baixo, esquerda, direita
+        </p>
+        <form>
+            <input type="text" placeholder="Ação" autofocus>
+            <button id="btn">Enviar</button>
+        </form>
+        <div class="mensagens">
+            <template id="mensagem-template" class="mensagem">
+                <div>#mensagem</div>
+            </template>
+        </div>
+    </main>  
+    <script>
+        const form = document.querySelector('form');
+        const input = form.querySelector('input[type="text"]');
+        const mensagens = document.querySelector('.mensagens');
+        const template = document.getElementById('mensagem-template');
+
+        function adicionarMensagem(mensagem) {
+            const clone = template.content.cloneNode(true);
+            clone.firstElementChild.textContent = mensagem;
+            mensagens.appendChild(clone);
+            mensagens.scrollTop = mensagens.scrollHeight;
+
+        }
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            const acao = input.value.trim(); // Pega o valor do input e remove espaços em branco
+
+            const parsedAcao = acao.match(/^(\d+)\s*(.*)$/); // Extrai número inicial e restante da string
+            if (!parsedAcao) {
+                adicionarMensagem("**Input inválido**");
+                return
+            }
+            
+            const [_, quant, text] = parsedAcao;
+            if(text !== "cima" && text !== "baixo" && text !== "esquerda" && text !== "direita") {
+                adicionarMensagem("**Direção inválida**");
+                return;
+            }
+
+            const num = parseInt(quant, 10); // Converte a parte numérica para inteiro
+            if (isNaN(num) || num <= 0) {
+                adicionarMensagem("**Número inválido**");
+                return;
+            }
+            const [logMov, biomaNovo] = window.andar(num, text); // Chama a função andar com os parâmetros extraídos
+
+            if (biomaNovo.length > 0) {
+                adicionarMensagem(biomaNovo);
+            }
+            adicionarMensagem(logMov);
+        })
+    </script>  
+</body>
+</html></div>
