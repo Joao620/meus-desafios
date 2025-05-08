@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Logica - Mines</title>
+    <script src="main.js"></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 50ch;
+            margin: auto;
+            background-color: #FFF;
+            min-height: 90dvh;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <span>Resultado:</span>
+        <textarea id="text-resultado" autocomplete='off'></textarea>
+        <button onclick="calcular()">Calcular!</button>
+        <span>JSON das celulas</span>
+        <textarea id="text-input" autocomplete='off'></textarea>
+    </main>
+</body>
+<script>
+    fetch("./celulas.json")
+        .then(result => result.text())
+        .then(text => {
+            const elem = document.getElementById("text-input")
+            elem.value = text
+            setTimeout(() => elem.style.height = elem.scrollHeight + "px")
+        })
+
+    function calcular(){
+        const textoInput = document.getElementById("text-input").value
+        const resultadoAnalise = analisar(JSON.parse(textoInput).celulas)
+        const resultadoAnalisePretty = JSON.stringify(resultadoAnalise, null, 2)
+        const elemTextoResultado = document.getElementById("text-resultado")
+        elemTextoResultado.value = resultadoAnalisePretty
+        
+        setTimeout(() => elemTextoResultado.style.height = elemTextoResultado.scrollHeight + "px")
+    }
+</script>
+</html>

@@ -1,0 +1,144 @@
+{
+    "celulas": [
+      {
+        "id": "A1",
+        "temperatura": 52,
+        "pressao": 45,
+        "atividadeBiologica": 80,
+        "pulsosEnergeticos": [10, 15, 30, 50]
+      },
+      {
+        "id": "A2",
+        "temperatura": 45,
+        "pressao": 39,
+        "atividadeBiologica": 85,
+        "pulsosEnergeticos": [5, 10, 12, 18]
+      },
+      {
+        "id": "A3",
+        "temperatura": 60,
+        "pressao": 50,
+        "atividadeBiologica": 78,
+        "pulsosEnergeticos": [15, 20, 25, 35]
+      },
+      {
+        "id": "A4",
+        "temperatura": 65,
+        "pressao": 42,
+        "atividadeBiologica": 70,
+        "pulsosEnergeticos": [10, 12, 18, 30]
+      },
+      {
+        "id": "A5",
+        "temperatura": 55,
+        "pressao": 44,
+        "atividadeBiologica": 82,
+        "pulsosEnergeticos": [20, 30, 40, 60]
+      },
+      {
+        "id": "B1",
+        "temperatura": 48,
+        "pressao": 42,
+        "atividadeBiologica": 79,
+        "pulsosEnergeticos": [10, 15, 20, 22]
+      },
+      {
+        "id": "B2",
+        "temperatura": 50,
+        "pressao": 48,
+        "atividadeBiologica": 73,
+        "pulsosEnergeticos": [10, 11, 12, 13]
+      },
+      {
+        "id": "B3",
+        "temperatura": 53,
+        "pressao": 49,
+        "atividadeBiologica": 75,
+        "pulsosEnergeticos": [14, 18, 20, 25]
+      },
+      {
+        "id": "B4",
+        "temperatura": 45,
+        "pressao": 38,
+        "atividadeBiologica": 85,
+        "pulsosEnergeticos": [10, 15, 17, 25]
+      },
+      {
+        "id": "B5",
+        "temperatura": 70,
+        "pressao": 60,
+        "atividadeBiologica": 80,
+        "pulsosEnergeticos": [5, 10, 20, 50]
+      },
+      {
+        "id": "C1",
+        "temperatura": 50,
+        "pressao": 43,
+        "atividadeBiologica": 71,
+        "pulsosEnergeticos": [5, 15, 30, 45]
+      },
+      {
+        "id": "C2",
+        "temperatura": 60,
+        "pressao": 50,
+        "atividadeBiologica": 78,
+        "pulsosEnergeticos": [10, 15, 30, 40]
+      },
+      {
+        "id": "C3",
+        "temperatura": 50,
+        "pressao": 49,
+        "atividadeBiologica": 72,
+        "pulsosEnergeticos": [10, 15, 17, 20]
+      },
+      {
+        "id": "C4",
+        "temperatura": 62,
+        "pressao": 42,
+        "atividadeBiologica": 80,
+        "pulsosEnergeticos": [15, 30, 40, 60]
+      },
+      {
+        "id": "C5",
+        "temperatura": 55,
+        "pressao": 43,
+        "atividadeBiologica": 76,
+        "pulsosEnergeticos": [10, 20, 25, 35]
+      },
+      {
+        "id": "D1",
+        "temperatura": 45,
+        "pressao": 50,
+        "atividadeBiologica": 88,
+        "pulsosEnergeticos": [5, 8, 12, 15]
+      },
+      {
+        "id": "D2",
+        "temperatura": 56,
+        "pressao": 41,
+        "atividadeBiologica": 80,
+        "pulsosEnergeticos": [12, 25, 35, 50]
+      },
+      {
+        "id": "D3",
+        "temperatura": 61,
+        "pressao": 49,
+        "atividadeBiologica": 79,
+        "pulsosEnergeticos": [10, 18, 22, 28]
+      },
+      {
+        "id": "D4",
+        "temperatura": 58,
+        "pressao": 45,
+        "atividadeBiologica": 84,
+        "pulsosEnergeticos": [10, 20, 30, 55]
+      },
+      {
+        "id": "D5",
+        "temperatura": 50,
+        "pressao": 42,
+        "atividadeBiologica": 70,
+        "pulsosEnergeticos": [20, 25, 30, 45]
+      }
+    ]
+  }
